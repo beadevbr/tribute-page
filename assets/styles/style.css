@@ -63,7 +63,6 @@ header {
   font-size: 40px;
 }
 .resu {
-  text-indent: 8px;
   margin-left: 10%;
   width: 40%;
   color: white;
@@ -79,6 +78,7 @@ header {
 .sub {
   margin-top: 20px;
   font-weight: normal;
+  text-indent: 8px;
   font-size: 25px;
   margin-left: 20px;
 }
@@ -190,8 +190,6 @@ footer img {
   .container2 {
     flex-direction: column;
   }
-  .sub {
-  }
   .histo {
     padding-top: 40px;
   }
@@ -285,4 +283,3 @@ footer img {
     font-size: 20px;
   }
 }
-
