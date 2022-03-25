@@ -3,7 +3,7 @@
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/80279567/160126574-62d6e22f-47f4-4b3a-943a-b70c73d78985.gif)
 
 ## 📋 Sobre o Projeto
-O desáfio foi criar um tribute page sobre uma pessoa famosa<br/>
+O desáfio foi criar um tribute page sobre uma pessoa famosa,<br/>
 com base nas informações seguintes:<br/>
 <li>✔️ Responsivo
 <li>✔️ Slide passando as obras do autor
