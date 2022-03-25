@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+}
+header {
+  display: flex;
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#banner {
+  display: flex;
+  background-image: url(../images/vanGogh.png);
+  background-repeat: no-repeat;
+  background-size: 450px;
+  flex-direction: column;
+  background-position-x: center;
+  justify-content: flex-end;
+  height: 500px;
+}
+.name img {
+  width: 400px;
+}
+.container,
+.name {
+  text-align: center;
+  font-weight: bold;
+  flex-direction: row;
+  color: white;
+}
+.name {
+  padding: 50px;
+  background-color: rgb(14, 14, 14);
+  border-radius: 100px;
+  margin-top: 25px;
+}
+.van {
+  font-size: 60px;
+}
+.van1 {
+  margin-bottom: 30px;
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.line {
+  display: flex;
+  background-color: rgb(59, 59, 59);
+  width: 80%;
+  height: 2px;
+  /* margin-top: -50px; */
+}
+.histo {
+  padding-bottom: 10px;
+  width: 80%;
+  text-align: left;
+  font-size: 40px;
+}
+.resu {
+  text-indent: 8px;
+  margin-left: 10%;
+  width: 40%;
+  color: white;
+}
+.container2 {
+  display: flex;
+  flex-direction: row;
+}
+.title {
+  margin-top: 40px;
+  font-size: 40px;
+}
+.sub {
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 25px;
+  margin-left: 20px;
+}
+.text {
+  max-width: 80%;
+}
+
+.lateral {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 200px;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+}
+aside h1 {
+  font-size: 30px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.slide {
+  height: 100%;
+  margin: 20px;
+  display: grid;
+  box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.4);
+}
+
+.slide-items {
+  position: relative;
+  grid-area: 1/1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slide-nav {
+  grid-area: 1/1;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.slide-nav button {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+
+.slide-items > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slide-items > .active {
+  position: relative;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.slide-thumb {
+  display: flex;
+  grid-column: 1 / 3;
+}
+
+.slide-thumb > span {
+  flex: 1;
+  display: block;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.slide-thumb > span.active::after {
+  content: "";
+  display: block;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  transform: translateX(-100%);
+  animation: thumb 5s forwards linear;
+}
+
+@keyframes thumb {
+  to {
+    transform: initial;
+  }
+}
+
+.made {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  color: rgb(241, 241, 241);
+}
+footer img {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  width: 40px;
+}
+
+@media (max-width: 1024px) {
+  .container2 {
+    flex-direction: column;
+  }
+  .sub {
+  }
+  .histo {
+    padding-top: 40px;
+  }
+  .resu {
+    width: 80%;
+  }
+  .lateral {
+    margin: auto;
+    width: 100%;
+    padding-top: 50px;
+  }
+  .slide-items > * {
+    width: 600px;
+  }
+  aside h1 {
+    font-size: 25px;
+    padding: 0;
+  }
+  footer img {
+    width: 30px;
+  }
+  .made {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .lateral {
+    margin: auto;
+    padding-top: 50px;
+  }
+  .slide-items > * {
+    width: 600px;
+  }
+  aside h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 425px) {
+  #banner {
+    background-size: 320px;
+    height: 450px;
+  }
+  .name {
+    padding: 0px;
+    width: 250px;
+  }
+  .van {
+    font-size: 40px;
+  }
+  .van1 {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .sub {
+    font-size: 20px;
+  }
+
+  .slide-items > * {
+    width: 350px;
+  }
+  aside h1 {
+    font-size: 15px;
+  }
+  footer img {
+    width: 25px;
+  }
+  .made {
+    font-size: 8px;
+  }
+}
+@media (max-width: 320px) {
+  .slide-items > * {
+    width: 300px;
+  }
+  aside h1 {
+    font-size: 12px;
+  }
+}
