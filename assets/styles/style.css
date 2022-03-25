@@ -265,11 +265,23 @@ footer img {
     font-size: 8px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .slide-items > * {
     width: 300px;
   }
+  .title {
+    font-size: 25px;
+  }
   aside h1 {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 23px;
+  }
+  .sub {
+    font-size: 20px;
   }
 }
